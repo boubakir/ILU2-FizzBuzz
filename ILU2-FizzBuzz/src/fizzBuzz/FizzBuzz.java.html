@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>FizzBuzz.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">ILU2-FizzBuzz (25 avr. 2024 12:48:36)</a> &gt; <a href="../../index.html" class="el_group">ILU2-FizzBuzz</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">fizzBuzz</a> &gt; <span class="el_source">FizzBuzz.java</span></div><h1>FizzBuzz.java</h1><pre class="source lang-java linenums">package fizzBuzz;
+
+<span class="nc" id="L3">public class FizzBuzz {</span>
+
+
+	/*public static Object fizzBuzz(int i) {
+		String sres = &quot;&quot;;
+		if (i%3 == 0) sres += &quot;fizz&quot;;
+		if (i%5 == 0) sres += &quot;buzz&quot;;
+		if(sres.equals(&quot;&quot;))
+			return Integer.toString(i);
+		else
+			return sres; 
+	}*/
+	
+	
+	//Refactor
+	
+<span class="fc" id="L19">	static Integer[] valSpec = {3, 5};</span>
+<span class="fc" id="L20">	static String[] motsSpec = {&quot;fizz&quot;, &quot;buzz&quot;};</span>
+	
+	public static String fizzBuzz(int entree) {
+<span class="fc" id="L23">		StringBuilder result = new StringBuilder(&quot;&quot;);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">		for(int i = 0; i &lt; valSpec.length; i++  ) {</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">			if (entree%valSpec[i] == 0) result.append(motsSpec[i]);</span>
+		}
+<span class="fc bfc" id="L27" title="All 2 branches covered.">		if(result.length()==0)</span>
+<span class="fc" id="L28">			return Integer.toString(entree);</span>
+		else
+<span class="fc" id="L30">			return result.toString(); </span>
+	}
+	
+	
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>ILU2-FizzBuzz (25 avr. 2024 12:48:36)</div></body></html>
